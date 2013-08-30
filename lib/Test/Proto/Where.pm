@@ -13,6 +13,10 @@ Test::Proto::Where - provide case switching using Test::Proto
 
 0.001
 
+=cut
+
+our $VERSION = '0.001';
+
 =head1 SYNOPSIS
 
 	print test_subject {foo=>'bar'} =>
