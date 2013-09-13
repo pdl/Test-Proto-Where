@@ -8,6 +8,8 @@ Test::Proto::Where
 
 Uses Test::Proto and its upgrading feature to implement a dispatch.
 
+Note: This module is presently EXPERIMENTAL.
+
 INSTALLATION
 
 To install this module, run the following commands:

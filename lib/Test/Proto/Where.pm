@@ -26,6 +26,8 @@ our $VERSION = '0.001';
 
 Uses Test::Proto and its upgrading feature to implement a dispatch.
 
+Note: This module is presently B<EXPERIMENTAL>: it is a working proof of concept.
+
 =head1 SYNTAX
 
 =head3 test_subject
