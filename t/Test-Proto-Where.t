@@ -26,21 +26,21 @@ test_subject scalar('c'),
 			fail ('this is the test for c');
 		},
 	otherwise sub { pass ('got "c"') }
-;
+; # otherwise used if where fails
 
 test_subject 'd',
 	where 'd', sub{
 			pass ('got "d"');
 		},
 	otherwise sub { fail ('This is the test for d') }
-;
+; # otherwise not used if where does not fail
 
 ok( (
 	test_subject 'e',
 		where 'd', sub{ 0 },
 		where 'e', sub{ 1 },
-		otherwise sub { 0 }
-), 'test for e');
+		otherwise  sub{ 0 }
+), 'test for e'); # inline result
 
 
 ok( (
@@ -48,5 +48,5 @@ ok( (
 		where [], sub{ 0 },
 		where pHash, sub{ 1 },
 		otherwise sub { 0 }
-), 'test for hashref');
+), 'test for hashref'); # non-string result
 
